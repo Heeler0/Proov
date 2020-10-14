@@ -15,7 +15,12 @@ public class ApplicationController {
     private ApplicationService applicationService;
 
     @GetMapping("/api/application")
-    public List<ServiceObj> findAll(@RequestParam String name) {
+    public List<Application> findAll() {
+        return applicationService.findAll();
+    }
+
+    @GetMapping("/api/application")
+    public List<ServiceObj> findAllServices(@RequestParam String name) {
         return applicationService.findAllServices(name);
     }
 

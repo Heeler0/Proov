@@ -1,7 +1,6 @@
 package com.example.proov.repository;
 
 import com.example.proov.model.Application;
-import org.springframework.data.elasticsearch.annotations.Query;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
 
 import java.util.List;
@@ -12,5 +11,7 @@ public interface ApplicationRepository extends ElasticsearchRepository<Applicati
     Application findByName(String name);
 
     Optional<Application> findById(String id);
+
+    List<Application> findAll();
 
 }
