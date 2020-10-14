@@ -9,11 +9,13 @@ import java.util.Date;
 @Data
 @Document(indexName = "service")
 public class ServiceObj {
-
+    
     @Id
     private String id;
 
-    private String ServiceCode;
+    private String appId;
+
+    private String serviceCode;
 
     private String name;
 
@@ -24,7 +26,5 @@ public class ServiceObj {
     private String description;
 
     private Date lastModified;
-
-    private Application application;
 
 }

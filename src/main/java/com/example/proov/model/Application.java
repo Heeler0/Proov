@@ -5,7 +5,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 
 import java.util.Date;
-import java.util.List;
 
 @Data
 @Document(indexName = "application")
@@ -26,5 +25,4 @@ public class Application {
 
     private Date lastModified;
 
-    private List<ServiceObj> serviceObjList;
 }

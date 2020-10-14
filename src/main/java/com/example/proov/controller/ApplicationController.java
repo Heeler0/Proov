@@ -4,10 +4,7 @@ import com.example.proov.model.Application;
 import com.example.proov.model.ServiceObj;
 import com.example.proov.service.ApplicationService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,8 +15,8 @@ public class ApplicationController {
     private ApplicationService applicationService;
 
     @GetMapping("/api/application")
-    public List<Application> findAll() {
-        return applicationService.findAll();
+    public List<ServiceObj> findAll(@RequestParam String name) {
+        return applicationService.findAllServices(name);
     }
 
     @PostMapping("/api/application")
