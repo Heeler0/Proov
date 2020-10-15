@@ -15,8 +15,6 @@ public class ServiceObj {
 
     private String appId;
 
-    private String serviceCode;
-
     private String name;
 
     private String type;

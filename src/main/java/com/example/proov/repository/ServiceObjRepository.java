@@ -10,4 +10,6 @@ public interface ServiceObjRepository extends ElasticsearchRepository<ServiceObj
     List<ServiceObj> findByAppId(String appId);
 
     ServiceObj findByName(String name);
+
+    List<ServiceObj> findAll();
 }

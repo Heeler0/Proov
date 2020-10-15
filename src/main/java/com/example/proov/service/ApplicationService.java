@@ -30,7 +30,6 @@ public class ApplicationService {
     }
 
     public Application save(Application application) {
-
         if(application.getId() != null) {
             throw new InvalidApplicationException("Id already present");
         } else if(!Arrays.asList("java", "php", "box", "os component", "database engine").contains(application.getAppType())) {

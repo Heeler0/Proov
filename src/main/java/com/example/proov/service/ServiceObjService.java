@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -45,4 +46,7 @@ public class ServiceObjService {
         return serviceObjRepository.save(serviceObj);
     }
 
+    public List<ServiceObj> findAll() {
+        return serviceObjRepository.findAll();
+    }
 }

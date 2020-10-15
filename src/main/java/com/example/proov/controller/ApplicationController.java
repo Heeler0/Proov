@@ -14,7 +14,7 @@ public class ApplicationController {
     @Autowired
     private ApplicationService applicationService;
 
-    @GetMapping("/api/application")
+    @GetMapping("/api/application/all")
     public List<Application> findAll() {
         return applicationService.findAll();
     }
